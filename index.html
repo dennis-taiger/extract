@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Taiger Extract Demo Portal</title>
+    <link rel="stylesheet" href="css\style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      function pageRedirect() {
+        var x = document.forms["myForm"]["username"].value;
+        if (x == "") {
+          alert("Username must be filled out");
+          return false;
+        }
+        if (x != "sales") {
+          alert("Username not found");
+          return false;
+        }
+        var y = document.forms["myForm"]["password"].value;
+        if (y != "taigersg") {
+          alert("Password incorrect");
+          return false;
+        }
+        window.location.href = "main2.html";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-form">
+      <div class="text">LOGIN</div>
+      <form name="myForm">
+        <div class="field">
+          <div class="fas fa-user"></div>
+          <input type="text" placeholder="User" name="username" />
+        </div>
+        <div class="field">
+          <div class="fas fa-lock"></div>
+          <input type="password" placeholder="Password" name="password" />
+        </div>
+        <button type="button" onclick="pageRedirect()">LOGIN</button>
+        <!--div class="link">
+          Not a member?
+          <a href="#">Signup now</a>
+        </div-->
+      </form>
+    </div>
+  </body>
+</html>

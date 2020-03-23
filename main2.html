@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAIGER EXTRACT DEMO PORTAL</title>
+    <link rel="stylesheet" href="css/style-main2.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+  </head>
+
+  <body>
+    <!--h1>TAIGER</h1-->
+    <h1 class="mb-0 site-logo">
+      <a href="https://taiger.com" class="h2 mb-0"
+        ><img
+          src="img/Horizontal taiger black logo.png"
+          alt="Taiger Logo"
+          width="180"
+          height="80"
+        />
+      </a>
+    </h1>
+    <h5>
+      Taiger Extract is an award winning document extraction tool built for both
+      structured data and unstructured information with industry leading
+      accuracy.
+    </h5>
+    <div>
+      <button
+        class="button button1"
+        onclick="document.getElementById('extract-menu').src ='http://imatch-demo.taiger.io:8888/#/apply?userId=dennis'"
+      >
+        Credit Card Application
+      </button>
+      <button
+        class="button button2"
+        onclick="document.getElementById('extract-menu').src ='https://btpn.taiger.online/'"
+      >
+        Bank Daily Advice
+      </button>
+      <button
+        class="button button3"
+        onclick="document.getElementById('extract-menu').src ='https://ipos.taiger.online/'"
+      >
+        Intellectual Property Report Screening
+      </button>
+      <button
+        class="button button4"
+        onclick="document.getElementById('extract-menu').src ='https://claims.taiger.online/'"
+      >
+        Insurance Claims Processing
+      </button>
+      <div
+        id="menu-div"
+        style="height: 800px; width: 1px; min-width: 100%; background-color: #fff; padding-top:10px;"
+      >
+        <div
+          style="height: 800px; width: 1px; min-width: 100%; background-color: #fff;"
+        >
+          <iframe
+            id="extract-menu"
+            frameborder="0"
+            height="100%"
+            style="width: 1px; min-width: 100%;"
+            src="background.html"
+          >
+          </iframe>
+          <script type="text/javascript">
+            if (/iPad|iPhone|iPod/.test(window.navigator.userAgent)) {
+              document
+                .getElementById("extract-menu")
+                .setAttribute("scrolling", "no");
+            }
+            if (/iPad|iPhone|iPod/.test(window.navigator.userAgent)) {
+              document.getElementById("menu-div").style.height = "100%";
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
